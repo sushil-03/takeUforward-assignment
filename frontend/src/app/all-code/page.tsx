@@ -12,7 +12,7 @@ const AllCodes = () => {
 
   const delayedSearchUsername = useDebounce((value: string) => {
     setUserName(value);
-  }, 1000);
+  }, 500);
 
   useEffect(() => {
     getAllCodes(order, username).then((res: CodeType[] | any) => {
