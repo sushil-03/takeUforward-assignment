@@ -8,8 +8,12 @@ const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 const body_parser_1 = __importDefault(require("body-parser"));
 const dotenv_1 = __importDefault(require("dotenv"));
+// dotenv.config( {
+//     path: `${__dirname}/.env`
+//   }
+// )
 dotenv_1.default.config({
-    path: `${__dirname}/.env`
+// path: `${__dirname}/.env`
 });
 const codeRoute_1 = __importDefault(require("./routes/codeRoute"));
 const CodeModel_1 = __importDefault(require("./models/CodeModel"));
