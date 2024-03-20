@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.show-transition {
+  transition: transform 5s ease; /* Adjust timing and easing as needed */
+  transform: translateY(0);
+}
+
+.hide-transition {
+  transition: transform 5s ease; /* Adjust timing and easing as needed */
+  transform: translateY(100%);
+  pointer-events: none; /* Prevent interactions while hidden */
+}
