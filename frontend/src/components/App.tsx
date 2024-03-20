@@ -26,7 +26,7 @@ export default function App() {
   };
   return (
     <div className="mt-8">
-      <div className=" flex items-center justify-center lg:my-32 md:my-28 sm:my-14 my-10 lg:w-1/2 md:w-2/3 sm:w-3/4 w-5/6 mx-auto ">
+      <div className=" flex items-center justify-center lg:my-32 md:my-28 sm:my-14 my-10 lg:w-1/2 md:w-2/3  w-5/6 mx-auto ">
         <p className="text-center">
           <span className="md:text-xl sm:text-lg text-md font-medium font-mono">
             Code Hosting Hub

@@ -55,7 +55,7 @@ const ListCode = ({ code }: { code: CodeType }) => {
         >
           <div
             className={`lg:w-4/6  ${
-              seeMore ? " sm:h-[55vh]  h-[65vh]" : "sm:h-[30vh] h-[40vh"
+              seeMore ? " sm:h-[55vh]  h-[65vh]" : "sm:h-[30vh] h-[40vh]"
             }`}
           >
             <Editor

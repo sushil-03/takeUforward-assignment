@@ -48,7 +48,7 @@ const AllCodes = () => {
         </select>
       </div>
       <div>
-        <div className="bg-neutral-900 max-w-full  rounded-sm py-5 px-10 grid sm:grid-cols-4 md:grid-cols-6 grid-cols-3 text-gray-300 min-w-[300px]">
+        <div className="bg-neutral-900 max-w-full  rounded-sm py-5 px-10 grid sm:grid-cols-4 md:grid-cols-6 grid-cols-3 text-gray-300 min-w-[300px] md:text-base text-sm">
           <p className="sm:block hidden">Id</p>
           <p>Username</p>
           <p className="col-span-2 md:block hidden text-center">Timestamp</p>
