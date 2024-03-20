@@ -1,3 +1,4 @@
+import { CODE_SNIPPETS } from "@/constant";
 import { createContext, useContext, useState } from "react";
 type EditorContextType = {
   language: string;
@@ -11,9 +12,9 @@ type EditorContextType = {
 const EditorContext = createContext<EditorContextType | undefined>(undefined);
 
 export const EditorProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLangauage] = useState<string>("c++");
+  const [language, setLangauage] = useState<string>("cpp");
   const [standard_input, setStandartInput] = useState<string>("");
-  const [code, setCode] = useState<string>("");
+  const [code, setCode] = useState<string>(CODE_SNIPPETS[language]);
 
   return (
     <EditorContext.Provider

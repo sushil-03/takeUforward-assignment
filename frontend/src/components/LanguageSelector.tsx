@@ -26,7 +26,7 @@ const LanguageSelector = () => {
         >
           {languages.map((lang, index) => {
             return (
-              <option value={lang[0]} key={index} className="px-3">
+              <option value={lang[0]} key={index} className="px-3  capitalize">
                 {lang[0]}
               </option>
             );

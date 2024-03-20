@@ -14,3 +14,5 @@ export const CODE_SNIPPETS: Record<string, string> = {
   c: `\n#include <stdio.h>\n\nint main() {\n\tprintf("Hello, world!\\n");\n\treturn 0;\n}\n`,
   cpp: `\n#include <iostream>\n\nint main() {\n\tstd::cout << "Hello, world!" << std::endl;\n\treturn 0;\n}\n`,
 };
+export const BASE_URL = "https://takeuforward-assignment-6zqa.onrender.com"
+// export const BASE_URL = "http://localhost:3001"

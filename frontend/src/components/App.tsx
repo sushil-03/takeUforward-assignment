@@ -2,8 +2,8 @@
 import CodeEditor from "@/components/CodeEditor";
 import { useEditorContext } from "@/context/EditorContext";
 import { useState, MouseEvent } from "react";
-import axios from "axios";
 import addCode from "@/hooks/addCode";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [userName, setUserName] = useState("");
@@ -18,19 +18,21 @@ export default function App() {
       language,
     };
     const response = await addCode(data);
-    console.log("response", response);
+    if (response.status == 200) {
+      toast.success("Code added ");
+    } else {
+      toast.error(response.data.message);
+    }
   };
   return (
     <div className="mt-8">
-      <div className=" flex items-center justify-center md:my-28 sm:my-14 my-10 lg:w-1/2 md:w-2/3 sm:w-3/4 w-5/6 mx-auto">
+      <div className=" flex items-center justify-center lg:my-32 md:my-28 sm:my-14 my-10 lg:w-1/2 md:w-2/3 sm:w-3/4 w-5/6 mx-auto ">
         <p className="text-center">
-          <span className="md:text-2xl sm:text-xl text-lg">
-            {" "}
+          <span className="md:text-xl sm:text-lg text-md font-medium font-mono">
             Code Hosting Hub
           </span>
           <br />
-          <span className="md:text-4xl sm:text-2xl text-xl">
-            {" "}
+          <span className="md:text-2xl sm:text-xl text-lg font-medium font-mono">
             Streamlining Collaboration Online
           </span>
         </p>
@@ -54,6 +56,7 @@ export default function App() {
         </button>
       </form>
       <CodeEditor />
+      <Toaster position="bottom-center" />
     </div>
   );
 }

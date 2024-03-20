@@ -10,15 +10,15 @@ const AllCodes = () => {
   const [order, setOrder] = useState<OrderEnum>(OrderEnum.asc);
   const [username, setUserName] = useState<string>("");
 
-  const delayedSearchUsername2 = useDebounce((value: string) => {
+  const delayedSearchUsername = useDebounce((value: string) => {
     setUserName(value);
   }, 1000);
 
   useEffect(() => {
-    getAllCodes(order, username).then((res: CodeType[]) => {
-      console.log("codes", res);
-
-      setAllCodes(res);
+    getAllCodes(order, username).then((res: CodeType[] | any) => {
+      if (res.status == 200 && res.data.allCodes.length > 0) {
+        setAllCodes(res.data.allCodes);
+      }
     });
   }, [order, username]);
 
@@ -32,7 +32,7 @@ const AllCodes = () => {
             className=" bg-neutral-900 outline-none px-4 py-4 rounded-md outline-2 focus:outline-purple-800 w-full text-sm"
             placeholder="search by username"
             onChange={(e: ChangeEvent<HTMLInputElement>) => {
-              delayedSearchUsername2(e.target.value);
+              delayedSearchUsername(e.target.value);
             }}
           />
         </div>

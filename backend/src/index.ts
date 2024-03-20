@@ -5,14 +5,8 @@ import cors from "cors";
 const app = express();
 import bodyParser from "body-parser";
 import dotenv from 'dotenv'
-// dotenv.config( {
-//     path: `${__dirname}/.env`
-//   }
-// )
-dotenv.config({
-  // path: `${__dirname}/.env`
-}
-)
+
+dotenv.config()
 
 import code from "./routes/codeRoute";
 import db from './models/CodeModel'
@@ -45,4 +39,3 @@ app.listen(PORT, () => {
   console.log(`Server is running on PORT http://localhost:${PORT}`);
 });
 
-export = app

@@ -28,10 +28,8 @@ const CodeEditor = () => {
           language={language}
           height="70vh"
           theme="vs-dark"
-          defaultLanguage="c"
           onChange={handleEditorChange}
-          defaultValue="// some comment"
-          className="w-full text-xl"
+          className="w-full "
         />
       </div>
       <SampleInput
