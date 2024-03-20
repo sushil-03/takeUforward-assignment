@@ -13,7 +13,7 @@ const port = process.env.MYSQL_PORT || '0'
 
 
 const sequelize = new Sequelize(database, user, pass, {
-  host: 'mysql-84d76a2-sushilrawat1720-ea0b.a.aivencloud.com',
+  host: host,
   dialect: 'mysql',
   port: parseInt(port)
 });

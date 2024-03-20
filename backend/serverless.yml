@@ -5,7 +5,6 @@ provider:
   name: aws
   runtime: nodejs18.x
   memorySize: 2048
-  stage: dev
   region: ap-south-1
 
 functions:
